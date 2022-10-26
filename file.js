@@ -15,14 +15,14 @@ function generatePassword() {
     // typing a number out of range
     if (passwordLength <8) {
         alert ("Please choose a valid number between 8-128"); 
-        generatePassword();}
+        return "Please enter a valid number";}
     else if (passwordLength >128) {
         alert ("Please choose a valid number between 8-128"); 
-        generatePassword();}
+        return "Please enter a valid number";}
     // not typing any number
     else if (isNaN(passwordLength)) {
         alert("Password length must be a number between 8-128 characters");
-        generatePassword();} 
+        return "Please enter a valid number";} 
     // conditions accepted
     else {
         alert ("Your Password will contain " + passwordLength + " characters."); 
